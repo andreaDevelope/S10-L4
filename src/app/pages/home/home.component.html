@@ -1,0 +1,24 @@
+<h2 *ngIf="errMess" class="text-center mt-5">{{ errMess }}</h2>
+<h2 *ngIf="!errMess && fotoArr.length < 1" class="text-center mt-5">
+  caricamento...
+</h2>
+
+<div class="container">
+  <div class="row" *ngIf="fotoArr.length > 0">
+    <div class="col-12 col-md-4" *ngFor="let img of fotoArr">
+      <div class="card">
+        <img src="{{ img }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a routerLink="" class="btn btn-primary" (click)="addLikes(img)"
+            >LIKE</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

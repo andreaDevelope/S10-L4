@@ -1,0 +1,11 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs d-flex justify-content-center">
+  <li ngbNavItem>
+    <button routerLink="/" ngbNavLink>Home</button>
+    <!-- <ng-template ngbNavContent>First content</ng-template> -->
+  </li>
+  <li ngbNavItem>
+    <button routerLink="/likes" ngbNavLink>Likes</button>
+    <!-- <ng-template ngbNavContent>First content</ng-template> -->
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
